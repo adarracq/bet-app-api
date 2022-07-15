@@ -1,0 +1,20 @@
+{
+	"title": "Team : Create Team request payload",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"shortName": {
+			"type": "string"
+		},
+		"acronym": {
+			"type": "string"
+		},
+		"logo": {
+			"type": "string"
+		}
+	},
+	"required": ["name", "shortName", "acronym", "logo"],
+	"additionalProperties": false
+}

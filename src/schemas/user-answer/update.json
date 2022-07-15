@@ -1,0 +1,22 @@
+{
+	"title": "User Answer : Update User Answer request payload",
+	"type": "object",
+	"properties": {
+		"point": {
+			"type": "number"
+		},
+		"ownerID": {
+			"type": "string"
+		},
+		"contestID": {
+			"type": "string"
+		},
+		"betID": {
+			"type": "string"
+		},
+		"answerID": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}

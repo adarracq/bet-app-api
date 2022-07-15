@@ -1,0 +1,31 @@
+{
+	"title": "Contest : update Contest request payload",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"dateStart": {
+			"type": "string"
+		},
+		"dateEnd": {
+			"type": "string"
+		},
+		"status": {
+			"type": "number"
+		},
+		"type": {
+			"type": "number"
+		},
+		"stake": {
+			"type": "string"
+		},
+		"betIDs": {
+			"type": "array"
+		},
+		"playerIDs": {
+			"type": "array"
+		}
+	},
+	"additionalProperties": false
+}

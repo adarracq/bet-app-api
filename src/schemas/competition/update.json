@@ -1,0 +1,32 @@
+{
+	"title": "Competition : update Competition request payload",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"code": {
+			"type": "string"
+		},
+		"type": {
+			"type": "number"
+		},
+		"emblem": {
+			"type": "string"
+		},
+		"dateStart": {
+			"type": "string"
+		},
+		"dateEnd": {
+			"type": "string"
+		},
+		"currentMatchDay": {
+			"type": "number"
+		},
+		"scorersIDs": {
+			"type": "array"
+		}
+	},
+	"required": ["name", "code", "type", "emblem", "dateStart", "dateEnd", "currentMatchDay", "scorersIDs"],
+	"additionalProperties": false
+}

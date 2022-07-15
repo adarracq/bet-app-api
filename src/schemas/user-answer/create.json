@@ -1,0 +1,23 @@
+{
+	"title": "User Answer : Create User Answer request payload",
+	"type": "object",
+	"properties": {
+		"point": {
+			"type": "number"
+		},
+		"ownerID": {
+			"type": "string"
+		},
+		"contestID": {
+			"type": "string"
+		},
+		"betID": {
+			"type": "string"
+		},
+		"answerID": {
+			"type": "string"
+		}
+	},
+	"required": ["point", "ownerID", "contestID", "betID", "answerID"],
+	"additionalProperties": false
+}

@@ -1,0 +1,43 @@
+{
+	"title": "Standing : update Standing request payload",
+	"type": "object",
+	"properties": {
+		"position": {
+			"type": "string"
+		},
+		"playedGames": {
+			"type": "number"
+		},
+		"form": {
+			"type": "array"
+		},
+		"won": {
+			"type": "number"
+		},
+		"draw": {
+			"type": "number"
+		},
+		"lost": {
+			"type": "number"
+		},
+		"points": {
+			"type": "number"
+		},
+		"goalsFor": {
+			"type": "number"
+		},
+		"goalsAgainst": {
+			"type": "number"
+		},
+		"group": {
+			"type": "string"
+		},
+		"teamID": {
+			"type": "string"
+		},
+		"competitionID": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}

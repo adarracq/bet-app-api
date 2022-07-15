@@ -1,0 +1,14 @@
+{
+	"title": "User : update User request payload",
+	"type": "object",
+	"properties": {
+		"pseudo": {
+			"type": "pseudo",
+			"minLength": 2
+		},
+		"avatar": {
+			"type": "avatar"
+		}
+	},
+	"additionalProperties": false
+}

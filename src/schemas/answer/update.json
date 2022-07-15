@@ -1,0 +1,19 @@
+{
+	"title": "Answer : Update Answer request payload",
+	"type": "object",
+	"properties": {
+		"type": {
+			"type": "number"
+		},
+		"title": {
+			"type": "string"
+		},
+		"value": {
+			"type": "string"
+		},
+		"betID": {
+			"type": "string"
+		}
+	},
+	"additionalProperties": false
+}

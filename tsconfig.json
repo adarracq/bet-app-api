@@ -1,0 +1,51 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "sourceMap": true,
+        "outDir": "./build",
+        "rootDir": "./src",
+        "strict": true,
+        "moduleResolution": "node",
+        "baseUrl": "./src",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "strictPropertyInitialization": false,
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "types": [
+            "node",
+            "jest"
+        ],
+        "downlevelIteration": true,
+        "declaration": false
+    },
+    "lib": [
+        "es2018",
+        "dom"
+    ],
+    "resolve": {
+        "extensions": [
+            "js",
+            "ts"
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

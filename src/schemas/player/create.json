@@ -1,0 +1,35 @@
+{
+	"title": "Player : Create Player request payload",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"dateOfBirth": {
+			"type": "string"
+		},
+		"nationality": {
+			"type": "string"
+		},
+		"position": {
+			"type": "string"
+		},
+		"shirtNumber": {
+			"type": "number"
+		},
+		"teamID": {
+			"type": "string"
+		},
+		"goals": {
+			"type": "number"
+		},
+		"assists": {
+			"type": "number"
+		},
+		"penalties": {
+			"type": "number"
+		}
+	},
+	"required": ["name", "dateOfBirth", "nationality", "position", "shirtNumber", "teamID", "goals", "assists", "penalties"],
+	"additionalProperties": false
+}

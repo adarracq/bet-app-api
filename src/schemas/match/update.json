@@ -1,0 +1,43 @@
+{
+	"title": "User : update User request payload",
+	"type": "object",
+	"properties": {
+		"date": {
+			"type": "string"
+		},
+		"status": {
+			"type": "number"
+		},
+		"matchDay": {
+			"type": "number"
+		},
+		"stage": {
+			"type": "number"
+		},
+		"fullTimeHomeScore": {
+			"type": "number"
+		},
+		"fullTimeAwayScore": {
+			"type": "number"
+		},
+		"halfTimeHomeScore": {
+			"type": "number"
+		},
+		"halTimeAwayScore": {
+			"type": "number"
+		},
+		"result": {
+			"type": "number"
+		},
+		"competitionID": {
+			"type": "number"
+		},
+		"homeTeamID": {
+			"type": "number"
+		},
+		"AwayTeamID": {
+			"type": "number"
+		}
+	},
+	"additionalProperties": false
+}

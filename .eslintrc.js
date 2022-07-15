@@ -1,0 +1,55 @@
+module.exports = {
+	root: true,
+	parser: '@typescript-eslint/parser',
+	parserOptions: {
+		commonjs: true,
+		es2021: true,
+		node: true,
+	},
+	plugins: ['@typescript-eslint', 'prettier'],
+	env: {
+		browser: true,
+		es2021: true,
+	},
+	settings: {
+		'import/resolver': {
+			node: {
+				extensions: ['.js', '.ts'],
+				moduleDirectory: [
+					'node_modules',
+					'src/routes/',
+					'src/handlers/',
+					'src/logic/',
+					'src/middlwares/',
+					'src/model/',
+					'src/utils/',
+				],
+			},
+		},
+	},
+	extends: [
+		'eslint:recommended',
+		'plugin:@typescript-eslint/recommended',
+		'plugin:jest/recommended',
+		'eslint-config-airbnb',
+		'plugin:prettier/recommended',
+		'plugin:import/errors',
+		'plugin:import/warnings',
+		'plugin:import/typescript',
+	],
+	rules: {
+		'no-plusplus': [0, { allowForLoopAfterthoughts: true }],
+		'no-underscore-dangle': [0],
+		'import/extensions': [0, 'always'],
+		'import/no-unresolved': [0],
+		indent: ['error', 'tab'],
+		'linebreak-style': ['error', 'unix'],
+		quotes: ['error', 'single'],
+		semi: ['error', 'always'],
+		'prettier/prettier': 'error',
+		'no-shadow': 'off',
+		'@typescript-eslint/no-shadow': ['error'],
+		'no-unused-vars': 'off',
+		'@typescript-eslint/no-unused-vars': 'error',
+	},
+};

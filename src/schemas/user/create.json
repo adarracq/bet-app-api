@@ -1,0 +1,15 @@
+{
+	"title": "User : Create User request payload",
+	"type": "object",
+	"properties": {
+		"pseudo": {
+			"type": "string",
+			"minLength": 2
+		},
+		"avatar": {
+			"type": "string"
+		}
+	},
+	"required": ["pseudo", "avatar"],
+	"additionalProperties": false
+}
