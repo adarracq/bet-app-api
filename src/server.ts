@@ -11,6 +11,7 @@ import rateLimit from 'express-rate-limit';
 import { connect } from './utils/socket';
 import userRoutes from './routes/user';
 import competitionRoutes from './routes/competition';
+import matchRoutes from './routes/match';
 
 
 // limit of connection : 5 attempts per 3 min
@@ -66,6 +67,7 @@ if (process.env.SUB_PATH) subpath = process.env.SUB_PATH;
 
 app.use(`${subpath}/api/v1/user`, userRoutes);
 app.use(`${subpath}/api/v1/competition`, competitionRoutes);
+app.use(`${subpath}/api/v1/match`, matchRoutes);
 
 // start server
 const port = process.env.PORT || 3000;
