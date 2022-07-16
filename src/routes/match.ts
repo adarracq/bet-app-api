@@ -1,5 +1,5 @@
 import express from 'express';
-import { createMatchHandler, getMatchHandler, updateMatchHandler, createAllMatchsHandler, updateAllMatchsHandler, getMatchsFromCompetitionsHandler } from '../handlers/match';
+import { createMatchHandler, getMatchHandler, updateMatchHandler, createAllMatchsHandler, updateAllMatchsHandler, getMatchsFromCompetitionsHandler, getMatchsByMatchDayHandler } from '../handlers/match';
 import { validatePayload } from '../middlewares/json-schema';
 import updateMatchSchema from '../schemas/match/update.json';
 import createMatchSchema from '../schemas/match/create.json';
@@ -18,6 +18,8 @@ matchRoutes.get('/:matchId', getMatchHandler)
 
 
 matchRoutes.get('/competition/:competitionId', getMatchsFromCompetitionsHandler)
+
+matchRoutes.get('/competition/:competitionId/:matchDay', getMatchsByMatchDayHandler)
 
 
 matchRoutes.patch('/:apiID', updateMatchHandler);

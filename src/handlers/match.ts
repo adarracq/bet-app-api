@@ -4,7 +4,7 @@ import { NextFunction, Response } from 'express';
 var axios = require('axios');
 import i18n from 'i18n';
 import { MatchModel } from 'model/match';
-import { createMatch, getMatch, updateMatch, getMatchsFromCompetition } from '../logic/match';
+import { createMatch, getMatch, updateMatch, getMatchsFromCompetition, getMatchsByMatchDay } from '../logic/match';
 
 export const ERROR_MATCH_NOT_FOUND_ERROR = 'MATCH_NOT_FOUND_ERROR';
 export const ERROR_MATCH_NOT_CREATED_ERROR = 'MATCH_NOT_CREATED_ERROR';
@@ -110,6 +110,21 @@ export const getMatchHandler = async (req: any, res: Response, next: NextFunctio
 export const getMatchsFromCompetitionsHandler = async (req: any, res: Response, next: NextFunction) => {
 	try {
 		const matchs = await getMatchsFromCompetition(req.params.competitionId)
+		if (matchs) {
+			res.json({
+				matchs: matchs
+			})
+		} else {
+			next({ message: i18n.__(ERROR_MATCH_NOT_FOUND_ERROR), status: 400 });
+		}
+	} catch (error) {
+		next(error)
+	}
+}
+
+export const getMatchsByMatchDayHandler = async (req: any, res: Response, next: NextFunction) => {
+	try {
+		const matchs = await getMatchsByMatchDay(req.params.competitionId, req.params.matchDay)
 		if (matchs) {
 			res.json({
 				matchs: matchs

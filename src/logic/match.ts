@@ -33,6 +33,15 @@ export const getMatchsFromCompetition = async (competitionCode : string): Promis
 	return null;
 }
 
+export const getMatchsByMatchDay = async (competitionCode : string, matchDay: number): Promise<Match[] | null> => {
+	const matchs = await MatchModel.find({competitionCode : competitionCode, matchDay : matchDay})
+	if (matchs) {
+		emit('getMatchsFromCompetition', matchs);
+		return matchs;
+	}
+	return null;
+}
+
 
 export const updateMatch = async (apiID: string, data: any): Promise<Match | null> => {
 	const match = await MatchModel.findOne({apiID : apiID});
